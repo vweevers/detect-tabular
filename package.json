@@ -1,0 +1,50 @@
+{
+  "name": "detect-tabular",
+  "version": "1.0.0",
+  "description": "Detects tabular data (spreadsheets, dsv or json) and emits objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "JSONStream": "~1.0.4",
+    "csv-parser": "~1.6.0",
+    "detect-format": "~1.0.0",
+    "excel-stream": "vweevers/excel-stream",
+    "is-binary": "~0.1.0",
+    "peek-stream": "~1.1.1",
+    "stream-combiner2": "~1.0.2"
+  },
+  "optionalDependencies": {
+    "phpexcel-stream": "~1.0.1"
+  },
+  "devDependencies": {
+    "coerce-tabular": "~1.0.0",
+    "concat-stream": "~1.4.8",
+    "deep-equal": "~1.0.0",
+    "tape": "~4.0.0",
+    "through2": "~0.6.5"
+  },
+  "keywords": [
+    "tabular",
+    "spreadsheet",
+    "dsv",
+    "csv",
+    "tsv",
+    "xls",
+    "xlsx",
+    "ods",
+    "json",
+    "ndjson",
+    "gnumeric",
+    "sylk"
+  ],
+  "author": "Vincent Weevers (http://vincentweevers.nl)",
+  "license": "MIT",
+  "repository": "git://github.com/vweevers/detect-tabular",
+  "bugs": "https://github.com/vweevers/detect-tabular/issues",
+  "homepage": "https://github.com/vweevers/detect-tabular",
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
