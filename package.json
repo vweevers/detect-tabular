@@ -6,6 +6,12 @@
   "scripts": {
     "test": "tape test/*.js"
   },
+  "files": [
+    "example.js",
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
   "dependencies": {
     "JSONStream": "~1.0.4",
     "csv-parser": "~1.6.0",
