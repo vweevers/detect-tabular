@@ -9,7 +9,7 @@
 [![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## example
+## Example
 
 `npm i detect-tabular map-tabular-keys snake-case jsonstream`
 
@@ -27,20 +27,20 @@ fs.createReadStream('test/air_pollution_nl.xlsx')
   .pipe(process.stdout)
 ```
 
-> **_Tip_** &nbsp; If you need normalization like this or number coercion, jump to [tabular-stream](https://www.npmjs.org/package/tabular-stream). If you want a CLI that does multi-format conversion, check out [tabular-cli](https://www.npmjs.org/package/tabular-cli).
+> **_Tip_**   If you need normalization like this or number coercion, jump to [tabular-stream](https://www.npmjs.org/package/tabular-stream). If you want a CLI that does multi-format conversion, check out [tabular-cli](https://www.npmjs.org/package/tabular-cli).
 
-## api
+## API
 
 ### `detect([options])`
 
 Returns a duplex stream - give it any tabular data, get back objects. Options are passed as-is to [`spreadsheet-stream`](https://github.com/vweevers/spreadsheet-stream) (if applicable).
 
-## supported input formats
+## Supported Input Formats
 
 Text formats:
 
-- DSV (CSV, TSV or anything) through [csv-parser](https://npmjs.com/package/csv-parser)
-- JSON and NDJSON through [JSONStream](https://npmjs.com/package/JSONStream)
+- DSV (CSV, TSV or anything) through [`csv-parser`](https://npmjs.com/package/csv-parser)
+- JSON and NDJSON through [`JSONStream`](https://npmjs.com/package/JSONStream)
 
 Binary formats, through [`spreadsheet-stream`](https://github.com/vweevers/spreadsheet-stream):
 
@@ -53,7 +53,7 @@ Binary formats, through [`spreadsheet-stream`](https://github.com/vweevers/sprea
 
 NB. Because these binary formats are not streamable, `spreadsheet-stream` will buffer the whole thing in memory. As a safe-guard you can set the `maxSize` option (in bytes): `detect({ maxSize: 1024 * 1024 })`. See [`spreadsheet-stream`](https://github.com/vweevers/spreadsheet-stream) for details.
 
-## install
+## Install
 
 With [npm](https://npmjs.org) do:
 
@@ -61,6 +61,6 @@ With [npm](https://npmjs.org) do:
 npm install detect-tabular
 ```
 
-## license
+## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Vincent Weevers](http://vincentweevers.nl). Inspired by [detect-data-stream](https://www.npmjs.com/package/detect-data-stream).  Test data © Statistics Netherlands, The Hague/Heerlen.
+[MIT](LICENSE.md) © 2015-present Vincent Weevers. Inspired by [`detect-data-stream`](https://www.npmjs.com/package/detect-data-stream).  Test data © Statistics Netherlands, The Hague/Heerlen.

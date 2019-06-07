@@ -2,9 +2,11 @@
   "name": "detect-tabular",
   "version": "1.0.0",
   "description": "A stream that detects tabular data (spreadsheets, dsv or json) and yields objects",
+  "author": "Vincent Weevers",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "standard && tape test/*.js"
+    "test": "standard && hallmark && tape test/*.js"
   },
   "files": [
     "example.js",
@@ -24,6 +26,7 @@
     "coerce-tabular": "^1.0.0",
     "concat-stream": "^2.0.0",
     "deep-equal": "^1.0.0",
+    "hallmark": "^0.1.0",
     "map-tabular-keys": "^1.0.0",
     "snake-case": "^2.1.0",
     "standard": "^12.0.1",
@@ -44,8 +47,6 @@
     "gnumeric",
     "sylk"
   ],
-  "author": "Vincent Weevers (http://vincentweevers.nl)",
-  "license": "MIT",
   "repository": "git://github.com/vweevers/detect-tabular",
   "bugs": "https://github.com/vweevers/detect-tabular/issues",
   "homepage": "https://github.com/vweevers/detect-tabular",
