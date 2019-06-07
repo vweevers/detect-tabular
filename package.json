@@ -1,7 +1,7 @@
 {
   "name": "detect-tabular",
   "version": "1.0.0",
-  "description": "Detects tabular data (spreadsheets, dsv or json) and emits objects",
+  "description": "A stream that detects tabular data (spreadsheets, dsv or json) and yields objects",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
@@ -18,11 +18,7 @@
     "detect-format": "~1.0.0",
     "is-binary": "~0.1.0",
     "peek-stream": "~1.1.1",
-    "spreadsheet-stream": "~1.0.0",
-    "stream-combiner2": "~1.0.2"
-  },
-  "optionalDependencies": {
-    "phpexcel-stream": "~1.0.1"
+    "spreadsheet-stream": "~1.0.0"
   },
   "devDependencies": {
     "coerce-tabular": "~1.0.0",
