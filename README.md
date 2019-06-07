@@ -7,23 +7,24 @@
 [![node](https://img.shields.io/node/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
 [![Travis build status](https://img.shields.io/travis/vweevers/detect-tabular.svg?label=travis)](http://travis-ci.org/vweevers/detect-tabular)
 [![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## example
 
 `npm i detect-tabular map-tabular-keys snake-case jsonstream`
 
 ```js
-var detect = require('detect-tabular')
-  , fs     = require('fs')
-  , keys   = require('map-tabular-keys')
-  , snake  = require('snake-case')
-  , json   = require('jsonstream')
+const detect = require('detect-tabular')
+const fs = require('fs')
+const keys = require('map-tabular-keys')
+const snake = require('snake-case')
+const json = require('jsonstream')
 
 fs.createReadStream('test/air_pollution_nl.xlsx')
-  .pipe( detect() )
-  .pipe( keys(snake) )
-  .pipe( json.stringify() )
-  .pipe( process.stdout )
+  .pipe(detect())
+  .pipe(keys(snake))
+  .pipe(json.stringify())
+  .pipe(process.stdout)
 ```
 
 > **_Tip_** &nbsp; If you need normalization like this or number coercion, jump to [tabular-stream](https://www.npmjs.org/package/tabular-stream). If you want a CLI that does multi-format conversion, check out [tabular-cli](https://www.npmjs.org/package/tabular-cli).

@@ -1,11 +1,13 @@
-var tabular = require('./')
-  , fs      = require('fs')
-  , keys    = require('map-tabular-keys')
-  , snake   = require('snake-case')
-  , json    = require('jsonstream')
+'use strict'
+
+const tabular = require('.')
+const fs = require('fs')
+const keys = require('map-tabular-keys')
+const snake = require('snake-case')
+const json = require('jsonstream')
 
 fs.createReadStream('test/air_pollution_nl.xlsx')
-  .pipe( tabular() )
-  .pipe( keys(snake) )
-  .pipe( json.stringify() )
-  .pipe( process.stdout )
+  .pipe(tabular())
+  .pipe(keys(snake))
+  .pipe(json.stringify())
+  .pipe(process.stdout)

@@ -1,36 +1,43 @@
-var test       = require('tape')
-  , tabular    = require('../')
-  , fs         = require('fs')
-  , concat     = require('concat-stream')
-  , through2   = require('through2').obj
-  , deepEqual  = require('deep-equal')
-  , coerce     = require('coerce-tabular')
+'use strict'
 
-var formats = ['txt', 'csv', 'xlsx', 'xls', 'ods', 'json']
-var expected = require('./air_pollution_nl.json').rows
-var base = __dirname + require('path').sep + 'air_pollution_nl.'
+const test = require('tape')
+const concat = require('concat-stream')
+const through2 = require('through2').obj
+const deepEqual = require('deep-equal')
+const coerce = require('coerce-tabular')
+const fs = require('fs')
+const path = require('path')
+const tabular = require('..')
 
-formats.forEach(function(format){
-  test(format, function(t){
-    t.plan(4)
+const formats = ['txt', 'csv', 'xlsx', 'xls', 'ods', 'json']
+const expected = require('./air_pollution_nl.json').rows
+const base = path.join(__dirname, 'air_pollution_nl.')
 
+formats.forEach(function (format) {
+  test(format, function (t) {
+    t.plan(5)
+
+    let sawNumbers = false
     fs.createReadStream(base + format)
-      .pipe( tabular() )
-      .pipe( coerce() )
+      .pipe(tabular())
+      .pipe(coerce())
 
       // Ignore tiny rounding differences
-      .pipe( through2(function(obj, _, next){
-        for(var k in obj) {
-          if (typeof obj[k] != 'string')
+      .pipe(through2(function (obj, _, next) {
+        for (let k in obj) {
+          if (typeof obj[k] === 'number') {
             obj[k] = obj[k].toFixed(2)
+            sawNumbers = true
+          }
         }
 
         next(null, obj)
       }))
 
-      .pipe( concat(function(data){
+      .pipe(concat(function (data) {
+        t.ok(sawNumbers, 'saw numbers')
         t.equal(data.length, expected.length, 'length ok')
-        t.deepEqual(data[data.length-1], expected[expected.length-1], 'last row ok')
+        t.deepEqual(data[data.length - 1], expected[expected.length - 1], 'last row ok')
         t.deepEqual(data[0], expected[0], 'first row ok')
         t.ok(deepEqual(data, expected), 'deep equal')
       }))
