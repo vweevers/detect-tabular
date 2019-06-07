@@ -7,7 +7,7 @@
 [![node](https://img.shields.io/node/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
 [![Travis build status](https://img.shields.io/travis/vweevers/detect-tabular.svg?label=travis)](http://travis-ci.org/vweevers/detect-tabular)
 [![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Greenkeeper badge](https://badges.greenkeeper.io/vweevers/detect-tabular.svg)](https://greenkeeper.io/)
 
 ## Example
 
