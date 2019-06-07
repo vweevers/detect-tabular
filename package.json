@@ -16,9 +16,9 @@
     "JSONStream": "~1.0.4",
     "csv-parser": "~1.6.0",
     "detect-format": "~1.0.0",
-    "excel-stream": "vweevers/excel-stream",
     "is-binary": "~0.1.0",
     "peek-stream": "~1.1.1",
+    "spreadsheet-stream": "~1.0.0",
     "stream-combiner2": "~1.0.2"
   },
   "optionalDependencies": {

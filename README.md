@@ -1,6 +1,6 @@
 # detect-tabular
 
-**Detects tabular data (dsv, json, ndjson, xls, xlsx, xml, ods or sylk) and emits objects. Memory efficient for spreadsheets [if PHP is available](https://www.npmjs.com/package/phpexcel-stream), but [does not require it](https://www.npmjs.com/package/excel-stream). Spreadsheets and DSV must have a header.**
+**Detects tabular data (dsv, json, ndjson, xls, xlsx, xml, ods or sylk) and emits objects. Memory efficient for spreadsheets [if PHP is available](https://www.npmjs.com/package/phpexcel-stream), but [does not require it](https://github.com/vweevers/spreadsheet-stream). Spreadsheets and DSV must have a header.**
 
 [![npm status](http://img.shields.io/npm/v/detect-tabular.svg?style=flat-square)](https://www.npmjs.org/package/detect-tabular) [![Travis build status](https://img.shields.io/travis/vweevers/detect-tabular.svg?style=flat-square&label=travis)](http://travis-ci.org/vweevers/detect-tabular) [![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?style=flat-square&label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular) [![Dependency status](https://img.shields.io/david/vweevers/detect-tabular.svg?style=flat-square)](https://david-dm.org/vweevers/detect-tabular)
 
@@ -32,7 +32,7 @@ Returns a duplex stream - give it any tabular data, get back objects. There's on
 
 #### `boolean phpexcel`
 
-Whether to use [phpexcel-stream](https://npmjs.com/package/phpexcel-stream) (memory efficient) or [excel-stream](https://npmjs.com/package/excel-stream) (usually faster) for spreadsheets. Default is `undefined`, meaning it will try to require `phpexcel-stream` but if PHP is not available, fallback to `excel-stream`. This might change in the future. Hopefully someone comes up with a native, pure streaming, memory efficient spreadsheet parser.
+Whether to use [`phpexcel-stream`](https://npmjs.com/package/phpexcel-stream) (memory efficient) or [`spreadsheet-stream`](https://github.com/vweevers/spreadsheet-stream) (usually faster) for spreadsheets. Default is `undefined`, meaning it will try to require `phpexcel-stream` but if PHP is not available, fallback to `spreadsheet-stream`. This might change in the future. Hopefully someone comes up with a native, pure streaming, memory efficient spreadsheet parser.
 
 ## supported input formats
 
@@ -41,7 +41,7 @@ Text formats:
 - DSV (CSV, TSV or anything) through [csv-parser](https://npmjs.com/package/csv-parser)
 - JSON and NDJSON through [JSONStream](https://npmjs.com/package/JSONStream)
 
-And through [excel-stream](https://npmjs.com/package/excel-stream) or [phpexcel-stream](https://npmjs.com/package/phpexcel-stream):
+And through [`spreadsheet-stream`](https://github.com/vweevers/spreadsheet-stream) or [phpexcel-stream](https://npmjs.com/package/phpexcel-stream):
 
 - Office Open XML (xlsx, Excel 2007 and above)
 - SpreadsheetML (xml, Excel 2003)
@@ -49,7 +49,7 @@ And through [excel-stream](https://npmjs.com/package/excel-stream) or [phpexcel-
 - Open Document Format/OASIS (ods)
 - SYLK
 
-<small><i>NB. It actually supports even more formats - depending on whether excel-stream or phpexcel-stream is used - but only the shared formats are listed here</small></i>.
+<small><i>NB. It actually supports even more formats - depending on whether spreadsheet-stream or phpexcel-stream is used - but only the shared formats are listed here</small></i>.
 
 ## install
 

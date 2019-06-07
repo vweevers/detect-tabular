@@ -4,7 +4,7 @@ var peek     = require('peek-stream')
   , json     = require('JSONStream')
   , pipeline = require('stream-combiner2')
   , binary   = require('is-binary')
-  , excel    = require('excel-stream')
+  , sheet    = require('spreadsheet-stream')
 
 try {
   var php = require('phpexcel-stream')
@@ -18,9 +18,9 @@ var phpexcel = php && function() {
 
 module.exports = function (opts) {
   if (!opts || opts.phpexcel == null)
-    var spreadsheet = phpexcel || excel
+    var spreadsheet = phpexcel || sheet
   else
-    spreadsheet = opts.phpexcel ? phpexcel : excel;
+    spreadsheet = opts.phpexcel ? phpexcel : sheet;
 
   return peek({newline: false, maxBuffer: 8000}, function (data, swap) {
     // bullet-proof nor teally

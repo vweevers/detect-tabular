@@ -14,7 +14,7 @@ var options = [true, false]
 formats.forEach(function(format){
   options.forEach(function(bool){
     var opts = { phpexcel: bool }
-      , prefix = bool ? 'phpexcel-stream ' : 'excel-stream '
+      , prefix = bool ? 'phpexcel-stream ' : 'spreadsheet-stream '
 
     test(prefix + format, function(t){
       t.plan(4)
