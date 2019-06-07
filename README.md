@@ -1,7 +1,7 @@
 # detect-tabular
 
-> **A stream that detects tabular data (spreadsheets, dsv or json) and yields objects. Spreadsheets and DSV must have a header.**  
-> Supports 20+ different file formats.
+> **A stream that detects tabular data (spreadsheets, dsv or json) and yields objects.**  
+> Supports 20+ different file formats. Spreadsheets and DSV must have a header.
 
 [![npm status](http://img.shields.io/npm/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
 [![node](https://img.shields.io/node/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
