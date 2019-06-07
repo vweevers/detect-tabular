@@ -3,7 +3,10 @@
 > **A stream that detects tabular data (spreadsheets, dsv or json) and yields objects. Spreadsheets and DSV must have a header.**  
 > Supports 20+ different file formats.
 
-[![npm status](http://img.shields.io/npm/v/detect-tabular.svg?style=flat-square)](https://www.npmjs.org/package/detect-tabular) [![Travis build status](https://img.shields.io/travis/vweevers/detect-tabular.svg?style=flat-square&label=travis)](http://travis-ci.org/vweevers/detect-tabular) [![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?style=flat-square&label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular) [![Dependency status](https://img.shields.io/david/vweevers/detect-tabular.svg?style=flat-square)](https://david-dm.org/vweevers/detect-tabular)
+[![npm status](http://img.shields.io/npm/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
+[![node](https://img.shields.io/node/v/detect-tabular.svg)](https://www.npmjs.org/package/detect-tabular)
+[![Travis build status](https://img.shields.io/travis/vweevers/detect-tabular.svg?label=travis)](http://travis-ci.org/vweevers/detect-tabular)
+[![AppVeyor build status](https://img.shields.io/appveyor/ci/vweevers/detect-tabular.svg?label=appveyor)](https://ci.appveyor.com/project/vweevers/detect-tabular)
 
 ## example
 
