@@ -24,7 +24,7 @@ formats.forEach(function (format) {
 
       // Ignore tiny rounding differences
       .pipe(through2(function (obj, _, next) {
-        for (let k in obj) {
+        for (const k in obj) {
           if (typeof obj[k] === 'number') {
             obj[k] = obj[k].toFixed(2)
             sawNumbers = true
