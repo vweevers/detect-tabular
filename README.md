@@ -62,4 +62,6 @@ npm install detect-tabular
 
 ## License
 
-[MIT](LICENSE.md) © 2015-present Vincent Weevers. Inspired by [`detect-data-stream`](https://www.npmjs.com/package/detect-data-stream).  Test data © Statistics Netherlands, The Hague/Heerlen.
+[MIT](LICENSE).
+
+Test data © Statistics Netherlands, The Hague/Heerlen.
