@@ -16,7 +16,7 @@ module.exports = function (options) {
       return swap(null, sheet(options))
     }
 
-    var detected = detect(data)
+    const detected = detect(data)
 
     if (detected.format === 'json') {
       swap(null, json.parse(detected.selector))

@@ -16,7 +16,7 @@
 const detect = require('detect-tabular')
 const fs = require('fs')
 const keys = require('map-tabular-keys')
-const snake = require('snake-case')
+const snake = require('snake-case').snakeCase
 const json = require('jsonstream')
 
 fs.createReadStream('test/air_pollution_nl.xlsx')
