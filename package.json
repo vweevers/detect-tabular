@@ -51,6 +51,6 @@
   "bugs": "https://github.com/vweevers/detect-tabular/issues",
   "homepage": "https://github.com/vweevers/detect-tabular",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   }
 }
