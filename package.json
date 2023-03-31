@@ -25,12 +25,12 @@
   "devDependencies": {
     "coerce-tabular": "^1.0.0",
     "concat-stream": "^2.0.0",
-    "deep-equal": "^2.0.5",
-    "hallmark": "^4.1.0",
+    "deep-equal": "^2.2.0",
+    "hallmark": "^4.2.0",
     "map-tabular-keys": "^1.0.0",
     "snake-case": "^3.0.4",
-    "standard": "^16.0.4",
-    "tape": "^5.5.0",
+    "standard": "^17.0.0",
+    "tape": "^5.6.3",
     "through2": "^4.0.2"
   },
   "keywords": [
