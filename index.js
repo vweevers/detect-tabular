@@ -1,6 +1,6 @@
 'use strict'
 
-const peek = require('peek-stream')
+const peek = require('@vweevers/peek-stream')
 const detect = require('detect-format')
 const csv = require('csv-parser')
 const json = require('JSONStream')
@@ -16,14 +16,19 @@ module.exports = function (options) {
       return swap(null, sheet(options))
     }
 
+    // Strip utf-8 byte order mark
+    if (data.byteLength >= 3 && data[0] === 0xef && data[1] === 0xbb && data[2] === 0xbf) {
+      data = data.subarray(3)
+    }
+
     const detected = detect(data)
 
     if (detected.format === 'json') {
-      swap(null, json.parse(detected.selector))
+      swap(null, json.parse(detected.selector), data)
     } else if (detected.format === 'csv') {
-      swap(null, csv({ separator: detected.separator }))
+      swap(null, csv({ separator: detected.separator }), data)
     } else {
-      swap(null, sheet(options))
+      swap(null, sheet(options), data)
     }
   })
 }

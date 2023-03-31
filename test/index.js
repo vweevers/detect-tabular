@@ -43,3 +43,23 @@ formats.forEach(function (format) {
       }))
   })
 })
+
+test('csv with unicode', function (t) {
+  t.plan(1)
+
+  fs.createReadStream(path.join(__dirname, 'unicode.csv'))
+    .pipe(tabular())
+    .pipe(concat(function (data) {
+      t.same(data, [{ foo: 'a', bar: 'a\u2019a' }, { foo: 'b', bar: 'b\u2019b' }])
+    }))
+})
+
+test('csv with BOM', function (t) {
+  t.plan(1)
+
+  fs.createReadStream(path.join(__dirname, 'byte-order-mark.csv'))
+    .pipe(tabular())
+    .pipe(concat(function (data) {
+      t.same(data, [{ foo: 'a', bar: 'a\u2019a' }, { foo: 'b', bar: 'b\u2019b' }])
+    }))
+})
